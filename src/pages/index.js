@@ -5,15 +5,16 @@ import Layout from "../components/layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
 
+import Jumbotron from '../components/jumbotron'
+
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
+    <Jumbotron />
     <div className="container">
       <div className="header-container">
-        <h1>Oi, tudo bem?</h1>
-        <p>Welcome to my portfolio website. It's under construction at the moment but you can reach me here.</p>
       </div>
-      <div style={{ maxWidth: `400px`, marginBottom: `1.2rem` }}>
+      <div style={{ maxWidth: `700px`, marginBottom: `1rem` }}>
         <Image />
       </div>
     </div>
