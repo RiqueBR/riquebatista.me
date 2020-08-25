@@ -1,5 +1,5 @@
 import React from 'react';
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 import { Link } from 'gatsby';
 
 const NavLink = styled(Link)`
@@ -11,7 +11,7 @@ const NavLink = styled(Link)`
   padding: 0.25rem;
   text-decoration: none;
   &.current-page {
-    border-bottom: 2px solid #222;
+    border-bottom: 2px solid ;
   }
   &:last-of-type {
     margin-right: 0;
@@ -19,7 +19,6 @@ const NavLink = styled(Link)`
 `;
 
 const CustomHeader = styled.header`
-  border-bottom: 1px solid #ddd;
   display: flex;
   justify-content: space-between;
   padding: 0.5rem calc((100vw - 550px - 0.5rem) / 2);
@@ -31,14 +30,20 @@ const NavBar = styled.nav`
 
 const Header = () => (
   <CustomHeader>
-    <NavLink to="/" fontWeight="bold">
+    <NavLink to="/" fontWeight="300">
       /home
     </NavLink>
     <NavBar>
-      <NavLink to="/about/" activeClassName="current-page">
+      <NavLink 
+        to="/about/" 
+        activeClassName="current-page" 
+        fontWeight="300">
         /about
       </NavLink>
-      <NavLink to="/projects/" activeClassName="current-page">
+      <NavLink 
+        to="/projects/" 
+        activeClassName="current-page"
+        fontWeight="300">
         /projects
       </NavLink>
     </NavBar>
