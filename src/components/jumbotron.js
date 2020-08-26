@@ -28,7 +28,7 @@ const Jumbotron = () => (
   <div>
     <H1>Oi <span role="img" aria-label="wave-emoji">👋🏾</span>, tudo bem?</H1>
     <H2>
-      Welcome to my portfolio website. It's under construction at the moment but you can reach me <Link href="https://twitter.com/rique_p_batista">here</Link>.
+      My name is Henrique and welcome to my portfolio website. It's under construction at the moment but you can reach me <Link href="https://twitter.com/rique_p_batista">here</Link>.
     </H2>
 
     
