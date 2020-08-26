@@ -12,11 +12,10 @@ const Wrapper = styled.div`
 `
 const Footer = styled.div`
   position: fixed;
-  left: 0;
   bottom: 0;
   width: 100%;
   text-align: left;
-  margin-left: 0.5rem;
+  border-top: 0.5px solid #f7f7f7
 `
 
 const Layout = ({ children }) => {

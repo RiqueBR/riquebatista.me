@@ -3,12 +3,12 @@ import styled from 'styled-components'
 
 const H1 = styled.h1`
   font-weight: 600;
-  font-size: 32px;
+  font-size: 3.5rem;
   margin-top: 4rem;
 `
 const H2 = styled.h2`
   font-weight: 300;
-  font-size: 28px;
+  font-size: 2rem;
   line-height: 1.25;
 `
 
