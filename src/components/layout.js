@@ -7,6 +7,8 @@ import Header from './header'
 
 const Wrapper = styled.div`
   font-family: Lato, sans-serif;
+  max-width: 70rem;
+  margin: 0 6.5rem 0 6.5rem;
 `
 const Footer = styled.div`
   position: fixed;
