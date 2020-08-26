@@ -13,6 +13,15 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    {
+      resolve: 'gatsby-plugin-mdx',
+      // Setting what type of layout I'd like to use for MDX
+      options: {
+        defaultLayouts: {
+          default: require.resolve('./src/components/layout.js')
+        }
+      }
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-styled-components`,

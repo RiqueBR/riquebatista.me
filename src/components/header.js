@@ -1,33 +1,33 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'gatsby';
-// import { NavBar } from 'react-bootstrap';
+import Navbar from 'react-bootstrap/Navbar';
 
 const NavLink = styled(props => <Link {...props} />)`
   color: #222;
   font-size: 1.5rem;
   font-weight: ${props => props.fontWeight || 'normal'};
   line-height: 1;
-  margin: 0 5rem 0 0;
-  padding: 3rem 0 3rem 0;
+  margin: 0 5rem 3rem 0;
+  padding: 3rem 0 0.5rem 0;
   text-decoration: none;
   &.current-page {
-    border-bottom: 2px solid #222;
+    color: #00A0C6;
   }
   &:last-of-type {
     margin-right: 0;
   }
+  &:hover {
+    color: #222
+  }
 `;
 
-const NavBar = styled.nav`
-  display: flex;
-  justify-content: flex-start;
-`
+
 
 const Header = () => (
-  <NavBar className="fixed">
-    <NavLink to="/" fontWeight="300">
-      /home
+  <Navbar>
+    <NavLink to="/">
+      Placeholder
     </NavLink>
 
       <NavLink 
@@ -42,7 +42,13 @@ const Header = () => (
         fontWeight="300">
         /projects
       </NavLink>
-  </NavBar>
+      <NavLink 
+        to="/contact/" 
+        activeClassName="current-page"
+        fontWeight="300">
+        /contact
+      </NavLink>
+  </Navbar>
 
 );
 

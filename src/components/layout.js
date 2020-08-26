@@ -2,20 +2,22 @@ import React from "react"
 import PropTypes from "prop-types"
 import Helmet from 'react-helmet'
 import styled from 'styled-components'
+import Container from 'react-bootstrap/Container'
 
 import Header from './header'
 
-const Wrapper = styled.div`
+// This is a rect-bootsrap component styled in styled-components
+const Wrapper = styled(props => <Container {...props}/>)`
   font-family: Lato, sans-serif;
-  max-width: 70rem;
-  margin: 0 6.5rem 0 6.5rem;
+  margin-left: 6.5rem;
+  margin-right: 6.5rem;
 `
 const Footer = styled.div`
   position: fixed;
   bottom: 0;
-  width: 100%;
+  min-width: 80%;
   text-align: left;
-  border-top: 0.5px solid #f7f7f7
+  border-top: 1px solid #f7f7f7;
 `
 
 const Layout = ({ children }) => {
@@ -30,7 +32,13 @@ const Layout = ({ children }) => {
         <Header />
         <main>{children}</main>
         <Footer>
-          <p>Built by Rique Batista</p>
+          <p 
+            css={`
+              margin-bottom: 0.25rem;
+            `}>
+              Built by Rique Batista
+          </p>
+          <p>There will be some analytics, nothing creepy.</p>
         </Footer>
       </Wrapper>
     </>

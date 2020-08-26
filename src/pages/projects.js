@@ -1,10 +1,15 @@
 import React from 'react';
+import styled from 'styled-components';
 
 import Layout from '../components/layout'
 
+const H1 = styled.h1`
+  margin-top: 4rem;
+`
+
 const Projects = () => (
   <Layout>
-    <h1>Projects</h1>
+    <H1>Projects</H1>
   </Layout>
 )
 
