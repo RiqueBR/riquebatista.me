@@ -25,7 +25,7 @@ const NavLink = styled(props => <Link {...props} />)`
 
 
 const Header = () => (
-  <Navbar>
+  <Navbar expand="lg">
     <NavLink to="/">
       Placeholder
     </NavLink>

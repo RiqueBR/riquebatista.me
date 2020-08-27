@@ -3,6 +3,7 @@ import PropTypes from "prop-types"
 import Helmet from 'react-helmet'
 import styled from 'styled-components'
 import Container from 'react-bootstrap/Container'
+import Navbar from 'react-bootstrap/Navbar'
 
 import Header from './header'
 
@@ -12,12 +13,12 @@ const Wrapper = styled(props => <Container {...props}/>)`
   margin-left: 6.5rem;
   margin-right: 6.5rem;
 `
-const Footer = styled.div`
-  position: fixed;
-  bottom: 0;
+const Footer = styled.section`
+  margin-bottom: 50px;
   min-width: 80%;
   text-align: left;
   border-top: 1px solid #f7f7f7;
+  padding: 60px 0;
 `
 
 const Layout = ({ children }) => {
@@ -31,15 +32,17 @@ const Layout = ({ children }) => {
       <Wrapper>
         <Header />
         <main>{children}</main>
-        <Footer>
-          <p 
-            css={`
-              margin-bottom: 0.25rem;
-            `}>
-              Built by Rique Batista
-          </p>
-          <p>There will be some analytics, nothing creepy.</p>
-        </Footer>
+        <div className="navbar fixed-bottom">
+          <div>
+              <p 
+                css={`
+                margin-bottom: 0.25rem;
+                `}>
+                  Built by Rique Batista
+              </p>
+              <p>There will be some analytics, nothing creepy.</p>
+            </div>
+        </div>
       </Wrapper>
     </>
   )
