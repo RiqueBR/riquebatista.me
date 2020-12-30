@@ -1,0 +1,4 @@
+/*
+  This component will handle the overall margins and paddings of
+  every page. This will be imported by the templates of pages.
+*/

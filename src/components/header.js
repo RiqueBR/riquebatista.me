@@ -1,35 +1,90 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'gatsby';
-import Navbar from 'react-bootstrap/Navbar';
+import { bpMinSM, bpMinMD } from '../lib/breakpoints';
+
+const NavbarContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  z-index: 1;
+  width: 100%;
+  
+  ${bpMinSM}{
+    height: 40px;
+    justify-content: end;
+  }
+
+  ${bpMinMD}{
+    height: 40px;
+    justify-content: end;
+  }
+
+`
+
 
 const NavLink = styled(props => <Link {...props} />)`
   color: #222;
   font-size: 1.5rem;
   font-weight: ${props => props.fontWeight || 'normal'};
   line-height: 1;
-  margin: 0 5rem 3rem 0;
-  padding: 3rem 0 0.5rem 0;
+  margin-right: 0.5rem;
+  padding-right: 0.5rem;
   text-decoration: none;
-  &.current-page {
-    color: #00A0C6;
-  }
-  &:last-of-type {
-    margin-right: 0;
-  }
-  &:hover {
-    color: #222
+    &.current-page {
+      color: #00A0C6;
+    }
+    &:last-of-type {
+      margin-right: 0;
+    }
+    &:hover {
+      color: #222
+    }
+
+  ${bpMinSM} {
+    font-size: 0.875rem;
   }
 `;
+
+const NavLogo = styled(props => <Link {...props} />)`
+  color: #767676;
+  line-height: 1;
+  align-items: center;
+  cursor: pointer;
+  font-size: 1.5rem;
+  margin-left: 24px;
+  font-weight: bold;
+  text-decoration: none;
+
+  ${bpMinSM} {
+    display: none;
+  }
+
+  ${bpMinMD} {
+    display: none;
+  }
+`
+
+const NavMenu = styled.ul`
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  list-style: none;
+  text-align: center;
+  margin-right: 0px;
+`
 
 
 
 const Header = () => (
-  <Navbar expand="lg">
-    <NavLink to="/">
-      Placeholder
-    </NavLink>
+  <NavbarContainer>
 
+    <NavLogo to="/">
+      Placeholder
+    </NavLogo>
+
+    <NavMenu>
       <NavLink 
         to="/about/" 
         activeClassName="current-page" 
@@ -48,8 +103,8 @@ const Header = () => (
         fontWeight="300">
         /contact
       </NavLink>
-  </Navbar>
-
+    </NavMenu>
+  </NavbarContainer>
 );
 
 export default Header;
