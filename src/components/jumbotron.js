@@ -1,5 +1,5 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from 'react';
+import styled from 'styled-components';
 import { bpMinSM } from '../lib/breakpoints';
 
 
@@ -39,8 +39,6 @@ const Jumbotron = () => (
     <H2>
       My name is Henrique and welcome to my portfolio website. It's under construction at the moment but you can reach me <Link href="https://twitter.com/rique_p_batista">here</Link>.
     </H2>
-
-    
   </div>
 );
 

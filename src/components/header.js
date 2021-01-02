@@ -13,12 +13,12 @@ const NavbarContainer = styled.div`
   
   ${bpMinSM}{
     height: 40px;
-    justify-content: end;
+    justify-content: flex-end;
   }
 
   ${bpMinMD}{
     height: 40px;
-    justify-content: end;
+    justify-content: flex-end;
   }
 
 `
@@ -34,12 +34,14 @@ const NavLink = styled(props => <Link {...props} />)`
   text-decoration: none;
     &.current-page {
       color: #00A0C6;
+      border-bottom: 2px solid #222;
     }
     &:last-of-type {
       margin-right: 0;
     }
     &:hover {
       color: #222
+      border-bottom: 2px solid #222;
     }
 
   ${bpMinSM} {
@@ -53,7 +55,7 @@ const NavLogo = styled(props => <Link {...props} />)`
   align-items: center;
   cursor: pointer;
   font-size: 1.5rem;
-  margin-left: 24px;
+  margin-left: 6px;
   font-weight: bold;
   text-decoration: none;
 

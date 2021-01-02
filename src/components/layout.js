@@ -6,7 +6,6 @@ import styled, { css } from 'styled-components'
 import Header from './header'
 import Footer from './footer'
 
-// This is a rect-bootsrap component styled in styled-components
 const Wrapper = styled(props => <div {...props}/>)`
   font-family: Lato, sans-serif;
   height: 100%;
