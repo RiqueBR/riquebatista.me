@@ -8,7 +8,7 @@ import Footer from './footer'
 
 const Wrapper = styled(props => <div {...props}/>)`
   font-family: Lato, sans-serif;
-  margin: 1.5em auto 0px;
+  margin: 0.5em auto 0px;
   max-width: 80%;
   display: flex;
   min-height: 100vh;

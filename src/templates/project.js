@@ -2,8 +2,8 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import { css } from 'styled-components';
 import { MDXRenderer } from 'gatsby-plugin-mdx'
-import Layout from '../../components/layout';
-import ReadLink from '../../components/ReadLink';
+import Layout from '../components/layout';
+import ReadLink from '../components/ReadLink';
 
 export const query = graphql`
     query($slug: String!) {
