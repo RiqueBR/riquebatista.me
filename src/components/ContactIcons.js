@@ -5,7 +5,7 @@ import {
   AiOutlineTwitter, 
   AiOutlineGithub,
   AiOutlineLinkedin
-} from 'react-icons/Ai'
+} from 'react-icons/ai'
 
 export const Twitter = ({ url = "" }) => {
   
