@@ -12,9 +12,8 @@ const useContent = () => {
             image {
               sharp: childImageSharp {
                 fluid (
-                  maxWidth: 100
-                  maxHeight: 100
-                  duotone: {shadow: "#663399", highlight: "#ddbbff"}
+                  maxWidth: 200
+                  maxHeight: 200
                 ) {
                   ...GatsbyImageSharpFluid_withWebp
                 }
@@ -27,12 +26,12 @@ const useContent = () => {
     }
   `);
 
-  return data.allMdx.nodes.map(post => ({
-    title: post.frontmatter.title,
-    author: post.frontmatter.author,
-    slug: post.frontmatter.slug,
-    image: post.frontmatter.image,
-    excerpt: post.frontmatter.excerpt
+  return data.allMdx.nodes.map(item => ({
+    title: item.frontmatter.title,
+    author: item.frontmatter.author,
+    slug: item.frontmatter.slug,
+    image: item.frontmatter.image,
+    excerpt: item.frontmatter.excerpt
   }));
 };
 

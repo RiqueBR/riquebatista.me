@@ -8,10 +8,11 @@ import Footer from './footer'
 
 const Wrapper = styled(props => <div {...props}/>)`
   font-family: Lato, sans-serif;
-  height: 100%;
   margin: 1.5em auto 0px;
-  padding: 20px;
   max-width: 80%;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
 `
 
 
@@ -20,15 +21,16 @@ const Layout = ({ children }) => {
 
   return (
     <div css={css`
-      position: relative;
-      min-height: 100%;
+
     `}>
       <Helmet>
         <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet"></link>
       </Helmet>
       <Wrapper>
         <Header />
-            <main>
+            <main css={css`
+              flex: 1;
+            `}>
               {children}
             </main>
           <Footer />

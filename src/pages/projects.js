@@ -10,6 +10,13 @@ const H1 = styled.h1`
   margin-top: 4rem;
 `
 
+const ProjectGrid = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 1em;
+  margin-top: 3em;
+`
+
 const Projects = () => {
   
   const projects = useContent();
@@ -18,12 +25,15 @@ const Projects = () => {
     <Layout>
       <H1>Projects</H1>
 
-      {projects.map(project => (
-        <Card 
+      <ProjectGrid>
+        {projects.map(project => (
+          <Card 
           key={project.slug} 
           title={project.title}
-          slug={project.slug} />
-      ))}
+          slug={project.slug}
+          image={project.image} />
+          ))}
+      </ProjectGrid>
 
   </Layout>
 )

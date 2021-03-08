@@ -1,55 +1,55 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import { css } from 'styled-components'
+import Image from "gatsby-image"
 
-const IllustrationCard = props => {
+const Card = props => {
 
 
   return (
+
     <Link
-      // css={css`
-      //   font-family: ${fonts.walsheimLight};
-      // `}
       to={`/${props.slug}`}
       aria-label={`View ${props.title}`}
-    >
+      >
       <div
         key={props.id}
         css={css`
         margin: 0 auto;
-          margin-bottom: 1em;
-          max-width: 450px;
+        margin-bottom: 1em;
+        max-width: 450px;
+        transition: all 1s cubic-bezier(0.2, 0.8, 0.2, 1) 0s;
+        .imgWrap {
           transition: all 1s cubic-bezier(0.2, 0.8, 0.2, 1) 0s;
+        }
+        &:hover {
+          transform: scale(1.015);
+          h4 {
+            color: #f84;
+          }
           .imgWrap {
-            transition: all 1s cubic-bezier(0.2, 0.8, 0.2, 1) 0s;
+            box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.15);
           }
-          &:hover {
-            transform: scale(1.015);
-            h4 {
-              color: #f84;
-            }
-            .imgWrap {
-              box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.15);
-            }
-          }
+        }
         `}
-      >
+        >
         <div className="imgWrap">
-          {/* <Img
+          <Image
             style={{
               borderRadius: '4px',
             }}
-            fluid={props.fluid}
-          /> */}
+            fluid={props.image.sharp.fluid}
+            alt={props.title}
+            />
         </div>
         <h4
           css={css`
-            margin-top: 0.8em;
-
-            text-align: center;
-            transition: all 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) 0s;
+          margin-top: 0.8em;
+          
+          text-align: center;
+          transition: all 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) 0s;
           `}
-        >
+          >
           {props.title}
         </h4>
       </div>
@@ -57,4 +57,4 @@ const IllustrationCard = props => {
   )
 }
 
-export default IllustrationCard
+export default Card;

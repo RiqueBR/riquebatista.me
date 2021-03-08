@@ -1,5 +1,6 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
+import { Twitter, GitHub, LinkedIn} from './ContactIcons'
 
 
 
@@ -10,10 +11,8 @@ const StyledLink = styled.a`
 `
 
 const WrappedFooter = styled.footer`
-  position: fixed;
+
   bottom: 0;
-  left: 0;
-  width: 97.5%;
   text-align: center;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
@@ -27,6 +26,7 @@ const Footer = () => (
         display: flex;
         align-items: center;
         justify-content: space-between;
+        margin-top: 3em;
       `}
     >
       <div
@@ -41,12 +41,13 @@ const Footer = () => (
         display: flex;
         flex-direction: row;
       `}>
-        <StyledLink href="#">LinkedIn</StyledLink>
-        <StyledLink href="#">Twitter</StyledLink>
-        <StyledLink href="#">Github</StyledLink>
+        <Twitter />
+        <GitHub />
+        <LinkedIn />
       </div>
     </div>
   </WrappedFooter>
+
 )
 
 export default Footer;
