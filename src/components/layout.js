@@ -9,6 +9,9 @@ import Footer from './footer'
 const Wrapper = styled(props => <div {...props}/>)`
   font-family: Lato, sans-serif;
   height: 100%;
+  margin: 1.5em auto 0px;
+  padding: 20px;
+  max-width: 80%;
 `
 
 
@@ -24,7 +27,7 @@ const Layout = ({ children }) => {
         <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet"></link>
       </Helmet>
       <Wrapper>
-          <Header />
+        <Header />
             <main>
               {children}
             </main>

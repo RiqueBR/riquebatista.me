@@ -11,13 +11,12 @@ const StyledLink = styled.a`
 
 const WrappedFooter = styled.footer`
   position: fixed;
-  left: 0;
   bottom: 0;
+  left: 0;
   width: 97.5%;
   text-align: center;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
-  margin-left: 0.5rem;
 `
 
 

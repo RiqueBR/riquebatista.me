@@ -3,7 +3,7 @@
   "private": true,
   "description": "Hopefully my personal portfolio website",
   "version": "0.1.0",
-  "author": "Henrique Batista <h.p.batista20@gmail.com",
+  "author": "Henrique Batista <h.p.batista20@gmail.com>",
   "dependencies": {
     "@mdx-js/mdx": "^1.6.16",
     "@mdx-js/react": "^1.6.16",

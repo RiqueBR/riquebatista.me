@@ -35,6 +35,13 @@ module.exports = {
         theme_color: `#663399`,
         display: `minimal-ui`,
       },
-    }
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'projects',
+        path: 'content/projects'
+      }
+    },
   ],
 }
