@@ -1,6 +1,6 @@
 # riquebatista.me
 
-## Personal project - portfolio
+## Personal portfolio
 
 ## This was built using:
 1. Gatsby

@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 import Layout from '../components/layout'
 import useContent from '../hooks/useContent'
-import Card from '../components/card'
+import Card from '../components/Card'
 
 
 const H1 = styled.h1`
@@ -15,6 +15,10 @@ const ProjectGrid = styled.div`
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 1em;
   margin-top: 3em;
+
+  @media (max-width: 767px) {
+    grid-template-columns: 1fr;
+  }
 `
 
 const Projects = () => {

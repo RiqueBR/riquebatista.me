@@ -16,6 +16,10 @@ const GridContainer = styled.div`
   display: grid;
   grid-template-columns: 60% 40%;
   gap: 2em;
+
+    @media (max-width: 767px) {
+      grid-template-columns: 1fr;
+  }
 `
 
 const Bio = styled.p`
