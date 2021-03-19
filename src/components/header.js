@@ -45,10 +45,10 @@ const NavLink = styled(props => <Link {...props} />)`
     }
 
   ${bpMinSM} {
-    font-size: 20px;
+    font-size: 12px;
   }
   ${bpMinMD} {
-    font-size: 20px;
+    font-size: 16px;
     padding-right: 0;
     margin-right: 0.4rem;
   }
@@ -65,11 +65,15 @@ const NavLogo = styled(props => <Link {...props} />)`
   text-decoration: none;
 
   ${bpMinSM} {
-    display: none;
+    font-size: 12px;
+    margin-left: 0px;
+    margin-right: 1rem;
   }
-
+  
   ${bpMinMD} {
-    display: none;
+    font-size: 16px;
+    margin-left: 0px;
+    margin-right: 3.5rem;
   }
 `
 
@@ -80,6 +84,7 @@ const NavMenu = styled.ul`
   list-style: none;
   text-align: center;
   margin-right: 0px;
+  padding-left: 0px;
 `
 
 
