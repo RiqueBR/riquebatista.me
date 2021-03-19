@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 import Layout from '../components/layout'
 import useContent from '../hooks/useContent'
-import Card from '../components/Card'
+// import Card from '../components/Card'
 
 
 const H1 = styled.h1`

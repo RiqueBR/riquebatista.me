@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import Helmet from 'react-helmet'
 import styled, { css } from 'styled-components'
 
-import Header from './Header'
+import Header from '../components/Header'
 import Footer from './footer'
 
 const Wrapper = styled(props => <div {...props}/>)`
