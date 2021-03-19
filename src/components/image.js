@@ -2,7 +2,9 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 
-// Needs to take a prop for image title and dimensions (e.g. width and height)
+// TODO: Needs to take a prop for image title and dimensions (e.g. width and height)
+// TODO: Add media queries
+
 
 const Image = () => {
   const data = useStaticQuery(graphql`

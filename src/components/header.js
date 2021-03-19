@@ -28,7 +28,7 @@ const NavLink = styled(props => <Link {...props} />)`
   color: #222;
   font-size: 1.5rem;
   font-weight: ${props => props.fontWeight || 'normal'};
-  line-height: 1;
+  line-height: 1.25;
   margin-right: 0.5rem;
   padding-right: 0.5rem;
   text-decoration: none;
@@ -45,7 +45,12 @@ const NavLink = styled(props => <Link {...props} />)`
     }
 
   ${bpMinSM} {
-    font-size: 0.875rem;
+    font-size: 20px;
+  }
+  ${bpMinMD} {
+    font-size: 20px;
+    padding-right: 0;
+    margin-right: 0.4rem;
   }
 `;
 
@@ -100,10 +105,10 @@ const Header = () => (
         /projects
       </NavLink>
       <NavLink 
-        to="/contact/" 
+        to="/garden/" 
         activeClassName="current-page"
         fontWeight="300">
-        /contact
+        /digital garden
       </NavLink>
     </NavMenu>
   </NavbarContainer>
