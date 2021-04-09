@@ -21,13 +21,6 @@ const H2 = styled.h2`
   }
 `
 
-const ImageWrapper = styled.div`
-  @media(max-wdith: 767px) {
-    display: none;
-  }
-
-`
-
 const ReferenceLink = styled(props => <Link {...props} />)`
   color: #000;
   text-decoration: none;
