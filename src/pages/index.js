@@ -8,18 +8,7 @@ import { bpMinSM } from '../lib/breakpoints';
 import SEO from "../components/seo";
 import Layout from "../components/layout";
 import Jumbotron from '../components/jumbotron';
-// import Image from "../components/image"
 
-
-const SectionHeader = styled.h3`
-  font-size: 2rem;
-`
-
-const Paragraph = styled.p`
-  font-size: 1.5rem;
-  font-weight: 300;
-  line-height: 1.25;
-`
 
 const H2 = styled.h2`
   font-weight: 300;
@@ -32,7 +21,10 @@ const H2 = styled.h2`
   }
 `
 
-const StyledImage = styled(props => <StaticImage {...props} />)`
+const ImageWrapper = styled.div`
+  @media(max-wdith: 767px) {
+    display: none;
+  }
 
 `
 
@@ -62,19 +54,32 @@ const IndexPage = () => {
         }
       `}>
 
-
+        <RoughNotation 
+          type="highlight" 
+          color="yellow"
+          iterations={1}
+          multiline={true}
+          show={true}>
           <H2>
           This is my portfolio website. You'll find some of my previous and current work, and learn a wee bit about me. It's under construction at the moment but you can reach me <RoughNotation type="circle" show={true}><ReferenceLink to="mailto:h.p.batista20@gmail.com">here</ReferenceLink></RoughNotation>.
           </H2>
-
-        <StaticImage
-          src="../images/build.png" 
-          alt="Picture of monitor under construction"
-          placeholder="blurred"
-          layout="constrained"
-          width={500}
-          height={500}
-        />
+        </RoughNotation>
+        
+        <div
+          css={css`
+            @media (max-width: 767px) {
+              display: none;
+            }
+          `}>
+          <StaticImage
+            src="../images/build.png"
+            alt="Picture of monitor under construction"
+            placeholder="blurred"
+            layout="constrained"
+            width={600}
+            height={500}
+            />
+        </div>
       </div>
     </Layout>
   )

@@ -50,7 +50,7 @@ const About = () => (
         placeholder="blurred"
         layout="constrained"
         width={340}
-        height={500}
+        height={390}
       />
     </GridContainer>
       <H2>Here's what I bring to the table</H2>

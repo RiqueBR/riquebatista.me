@@ -13,12 +13,12 @@ const NavbarContainer = styled.nav`
   
   ${bpMinSM}{
     height: 40px;
-    justify-content: flex-end;
+    justify-content: space-between;
   }
 
   ${bpMinMD}{
     height: 40px;
-    justify-content: flex-end;
+    justify-content: space-between;
   }
 
 `
