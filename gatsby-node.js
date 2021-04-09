@@ -18,7 +18,6 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   }
 
   const projects = result.data.allMdx.nodes;
-  console.log(projects.forEach(val => val.frontmatter.slug));
 
   projects.forEach(project => {
     actions.createPage({

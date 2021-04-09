@@ -5,8 +5,10 @@ import { MDXRenderer } from 'gatsby-plugin-mdx'
 import Layout from '../components/layout';
 import ReadLink from '../components/ReadLink';
 
+// TODO: This needs a major revamp, place more imagery and handle line height and font-size
+
 export const query = graphql`
-    query($slug: String!) {
+  query($slug: String!) {
     mdx(frontmatter: { slug: { eq: $slug } }) {
       frontmatter {
         title

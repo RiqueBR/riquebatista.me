@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { Link } from 'gatsby';
 import { bpMinSM, bpMinMD } from '../lib/breakpoints';
 
-const NavbarContainer = styled.div`
+const NavbarContainer = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -26,7 +26,7 @@ const NavbarContainer = styled.div`
 
 const NavLink = styled(props => <Link {...props} />)`
   color: #222;
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: ${props => props.fontWeight || 'normal'};
   line-height: 1.25;
   margin-right: 0.5rem;
@@ -59,7 +59,7 @@ const NavLogo = styled(props => <Link {...props} />)`
   line-height: 1;
   align-items: center;
   cursor: pointer;
-  font-size: 1.5rem;
+  font-size: 2rem;
   margin-left: 6px;
   font-weight: bold;
   text-decoration: none;
@@ -98,6 +98,12 @@ const Header = () => (
 
     <NavMenu>
       <NavLink 
+        to="/garden/" 
+        activeClassName="current-page"
+        fontWeight="300">
+        /digital garden
+      </NavLink>
+      <NavLink 
         to="/about/" 
         activeClassName="current-page" 
         fontWeight="300">
@@ -108,12 +114,6 @@ const Header = () => (
         activeClassName="current-page"
         fontWeight="300">
         /projects
-      </NavLink>
-      <NavLink 
-        to="/garden/" 
-        activeClassName="current-page"
-        fontWeight="300">
-        /digital garden
       </NavLink>
     </NavMenu>
   </NavbarContainer>

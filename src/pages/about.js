@@ -1,8 +1,7 @@
 import React from 'react';
-import styled from 'styled-components';
-
+import styled, {css} from 'styled-components';
+import { StaticImage } from 'gatsby-plugin-image';
 import Layout from '../components/layout';
-import Image from '../components/image.js'
 
 const H1 = styled.h1`
   margin-top: 4rem;
@@ -31,14 +30,6 @@ const Paragraph = styled.p`
   line-height: 1.6rem;
 `
 
-const SkillsWrapper = styled.div`
-  background-color: #eee;
-`
-
-const ContactWrapper = styled.div`
-
-`
-
 const About = () => (
   <Layout>
     <H1>Henrique Batista</H1>
@@ -53,7 +44,14 @@ const About = () => (
 
           Dummy text? More like dummy thicc text, amirite?
         </Paragraph>
-      <Image />
+      <StaticImage
+        src="../images/timmy_turner.png" 
+        alt="Picture of Henrique"
+        placeholder="blurred"
+        layout="constrained"
+        width={340}
+        height={500}
+      />
     </GridContainer>
       <H2>Here's what I bring to the table</H2>
       <Paragraph>

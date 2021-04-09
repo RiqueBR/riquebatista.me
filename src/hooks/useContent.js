@@ -1,30 +1,26 @@
 import { graphql, useStaticQuery } from 'gatsby';
 
 const useContent = () => {
-  const data = useStaticQuery(graphql`
-    query {
-      allMdx {
-        nodes {
-          frontmatter {
-            title
-            author
-            slug
-            image {
-              sharp: childImageSharp {
-                fluid (
-                  maxWidth: 200
-                  maxHeight: 200
-                ) {
-                  ...GatsbyImageSharpFluid_withWebp
-                }
-              }
-            }
+  const data = useStaticQuery(graphql`{
+  allMdx {
+    nodes {
+      frontmatter {
+        title
+        author
+        slug
+        image {
+          sharp: childImageSharp {
+            gatsbyImageData(width: 200, height: 200, layout: CONSTRAINED)
           }
-          excerpt
         }
       }
+      excerpt
     }
-  `);
+  }
+}
+`);
+
+
 
   return data.allMdx.nodes.map(item => ({
     title: item.frontmatter.title,

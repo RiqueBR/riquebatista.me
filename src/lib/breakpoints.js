@@ -1,5 +1,5 @@
-const minSM = 300
-const minMD = 500
+const minSM = 375
+const minMD = 767
 const minLG = 900
 
 export const bpMinSM = `@media (max-width: ${minSM}px)`

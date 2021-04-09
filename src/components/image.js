@@ -1,28 +1,21 @@
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
+import { GatsbyImage } from "gatsby-plugin-image";
 
 // TODO: Needs to take a prop for image title and dimensions (e.g. width and height)
 // TODO: Add media queries
 
 
-const Image = () => {
-  const data = useStaticQuery(graphql`
-    query {
-      file(relativePath: { eq: "timmy_turner.png" }) {
-        childImageSharp {
-          fixed(
-            width: 340,
-            height: 390
-          ) {
-            ...GatsbyImageSharpFixed
-          }
-        }
-      }
-    }
-  `)
+const Image = ({...props}) => {
 
-  return <Img fixed={data.file.childImageSharp.fixed} />
+
+
+  return <GatsbyImage
+    alt={props.alt} 
+    image={props.src}
+    placeholder={props.placeholder}
+    layout={props.layout}
+    width={props.width}
+    height={props.height} />;
 }
 
 export default Image
