@@ -10,6 +10,13 @@ const H1 = styled.h1`
 const H2 = styled.h2`
 font-weight: 500;
 line-height: 1.25;
+  &:after {
+    content: "";
+    border-top: 0.25rem solid #46b3d1;
+    margin: 0.5rem 0;
+    display: block;
+    width: 2rem;
+  }
 `
 
 const Subheader = styled.h2`
@@ -27,7 +34,8 @@ const GridContainer = styled.div`
 `
 
 const Paragraph = styled.p`
-  line-height: 1.6rem;
+  line-height: 2rem;
+  font-size: 1.25rem;
 `
 
 const About = () => (
@@ -49,11 +57,11 @@ const About = () => (
         alt="Picture of Henrique"
         placeholder="blurred"
         layout="constrained"
-        width={340}
-        height={390}
+        width={450}
+        height={550}
       />
     </GridContainer>
-      <H2>Here's what I bring to the table</H2>
+      <H2>How I can help</H2>
       <Paragraph>
         DIY ugh meh, yr cloud bread bicycle rights raw denim hammock. Mlkshk raclette echo park wolf chillwave vegan retro cornhole whatever schlitz church-key. Keffiyeh I'm baby shoreditch single-origin coffee ethical leggings scenester fam. Sartorial unicorn humblebrag, man bun cornhole knausgaard pok pok street art raw denim tousled wolf intelligentsia next level before they sold out raclette. Pork belly tumblr kitsch, mustache listicle vinyl artisan. Godard whatever shaman biodiesel farm-to-table.
       </Paragraph>

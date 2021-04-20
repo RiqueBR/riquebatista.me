@@ -47,16 +47,16 @@ const IndexPage = () => {
         }
       `}>
 
-        <RoughNotation 
-          type="highlight" 
-          color="yellow"
-          iterations={1}
-          multiline={true}
-          show={true}>
+        <div>
+
           <H2>
-          This is my portfolio website. You'll find some of my previous and current work, and learn a wee bit about me. It's under construction at the moment but you can reach me <RoughNotation type="circle" show={true}><ReferenceLink to="mailto:h.p.batista20@gmail.com">here</ReferenceLink></RoughNotation>.
+            This is my portfolio website. You'll find some of my previous and current work, and learn a wee bit about me.
           </H2>
-        </RoughNotation>
+            <H2>
+              It's under construction at the moment but you can reach me <RoughNotation type="circle" show={true}><ReferenceLink to="mailto:h.p.batista20@gmail.com">here</ReferenceLink></RoughNotation>.
+            </H2>
+
+        </div>
         
         <div
           css={css`
