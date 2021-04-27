@@ -45,25 +45,21 @@ const About = () => (
       Software engineer, passionate about creating digital solutions, life long learner
     </Subheader>
     <GridContainer>
-        <Paragraph>
-          I'm baby shoreditch single-origin coffee ethical leggings scenester fam. Sartorial unicorn humblebrag, man bun cornhole knausgaard pok pok street art raw denim tousled wolf intelligentsia next level before they sold out raclette. Pork belly tumblr kitsch, mustache listicle vinyl artisan. Godard whatever shaman biodiesel farm-to-table.
-
-          DIY ugh meh, yr cloud bread bicycle rights raw denim hammock. Mlkshk raclette echo park wolf chillwave vegan retro cornhole whatever schlitz church-key. Keffiyeh letterpress celiac gluten-free pop-up lyft subway tile activated charcoal marfa blue bottle unicorn hella. IPhone leggings shaman aesthetic street art ennui artisan subway tile umami succulents chartreuse fam air plant wayfarers glossier. Vaporware vexillologist artisan, coloring book palo santo bespoke jean shorts occupy succulents hella adaptogen bitters hammock beard. PBR&B meggings scenester, schlitz readymade forage marfa leggings hoodie williamsburg pop-up echo park knausgaard cardigan intelligentsia. Adaptogen cronut wayfarers dreamcatcher keytar.
-
-          Dummy text? More like dummy thicc text, amirite?
-        </Paragraph>
-      <StaticImage
+      <Paragraph>
+        I am a web developer living in Glasgow, Scotland. I'm very passionate about what I do, from creating digital solutions to providing a good experience for users. I was born in Brazil and have lived in three different countries, and have learnt tons about different cultures. 
+      </Paragraph>
+      {/* <StaticImage
         src="../images/timmy_turner.png" 
         alt="Picture of Henrique"
         placeholder="blurred"
         layout="constrained"
-        width={450}
-        height={550}
-      />
+        width={313}
+        height={744}
+      /> */}
     </GridContainer>
-      <H2>How I can help</H2>
+      <H2>Where I can help</H2>
       <Paragraph>
-        DIY ugh meh, yr cloud bread bicycle rights raw denim hammock. Mlkshk raclette echo park wolf chillwave vegan retro cornhole whatever schlitz church-key. Keffiyeh I'm baby shoreditch single-origin coffee ethical leggings scenester fam. Sartorial unicorn humblebrag, man bun cornhole knausgaard pok pok street art raw denim tousled wolf intelligentsia next level before they sold out raclette. Pork belly tumblr kitsch, mustache listicle vinyl artisan. Godard whatever shaman biodiesel farm-to-table.
+        My work intersects many areas, working with design and good ux approaches to development and testing (unit-testing & end-to-end). My preference is for ui and front end development.
       </Paragraph>
       <H2>Contact me!</H2>
       <Paragraph>

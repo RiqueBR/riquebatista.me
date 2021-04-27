@@ -6,11 +6,12 @@ import { bpMinSM } from '../lib/breakpoints';
 const H1 = styled.h1`
   font-weight: 600;
   font-size: 3.5rem;
-  margin-top: 5rem;
+  margin-top: 4rem;
   margin-bottom: 0;
 
   ${bpMinSM}{
     font-size: 3.25rem;
+    margin-top: 1.5rem;
   }
 `
 const Subheader = styled.h2`

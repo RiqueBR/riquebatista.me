@@ -2,7 +2,7 @@ import React from "react";
 import {StaticImage} from 'gatsby-plugin-image';
 import styled, {css} from 'styled-components';
 import { Link } from 'gatsby';
-import { RoughNotation } from "react-rough-notation";
+import { RoughNotation, RoughNotationGroup } from "react-rough-notation";
 import { bpMinSM } from '../lib/breakpoints';
 
 import SEO from "../components/seo";
@@ -24,6 +24,10 @@ const H2 = styled.h2`
 const ReferenceLink = styled(props => <Link {...props} />)`
   color: #000;
   text-decoration: none;
+
+  &:hover {
+    color: #00A0C6;
+  }
 `
 
 
@@ -48,13 +52,17 @@ const IndexPage = () => {
       `}>
 
         <div>
-
+        
+          <RoughNotationGroup show={true}>
+            {/* <RoughNotation type="box" show={true} order={1} animationDelay={800}> */}
           <H2>
-            This is my portfolio website. You'll find some of my previous and current work, and learn a wee bit about me.
+            This is my digital corner of the inter-web. I am on the process of deciding what will go into this space.
           </H2>
             <H2>
-              It's under construction at the moment but you can reach me <RoughNotation type="circle" show={true}><ReferenceLink to="mailto:h.p.batista20@gmail.com">here</ReferenceLink></RoughNotation>.
+              If you would like to reach me <RoughNotation type="underline" show={true} order={1} animationDelay={50000}><ReferenceLink to="mailto:h.p.batista20@gmail.com">just email me</ReferenceLink></RoughNotation> or you can <RoughNotation type="underline" padding={0} show={true} order={3} animationDelay={50000}><ReferenceLink to="/about/">learn a bit about myself.</ReferenceLink></RoughNotation>
             </H2>
+          {/* </RoughNotation> */}
+          </RoughNotationGroup>
 
         </div>
         

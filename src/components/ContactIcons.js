@@ -7,7 +7,7 @@ import {
   AiOutlineLinkedin
 } from 'react-icons/ai'
 
-export const Twitter = ({ url = "" }) => {
+export const Twitter = ({ url = "https://twitter.com/rique_p_batista" }) => {
   
   return (
     <a
@@ -31,7 +31,7 @@ export const Twitter = ({ url = "" }) => {
 
 
 
-export const GitHub = ({ url = "" }) => {
+export const GitHub = ({ url = "https://github.com/RiqueBR" }) => {
   
   return (
     <a
@@ -53,7 +53,7 @@ export const GitHub = ({ url = "" }) => {
   )
 }
 
-export const LinkedIn = ({ url = "" }) => {
+export const LinkedIn = ({ url = "https://www.linkedin.com/in/henrique-batista/" }) => {
   
   return (
     <a

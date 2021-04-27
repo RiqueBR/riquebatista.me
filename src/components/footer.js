@@ -39,7 +39,11 @@ const Footer = () => (
         display: flex;
         flex-direction: row;
       `}>
-        <Twitter />
+        <Twitter css={css`
+          &:visited {
+            color: #00A0C6;
+          }
+        `}/>
         <GitHub />
         <LinkedIn />
       </div>

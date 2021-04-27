@@ -59,8 +59,7 @@ const NavLogo = styled(props => <Link {...props} />)`
   line-height: 1;
   align-items: center;
   cursor: pointer;
-  font-size: 2rem;
-  margin-left: 6px;
+  font-size: 2.5rem;
   font-weight: bold;
   text-decoration: none;
 
@@ -93,7 +92,7 @@ const Header = () => (
   <NavbarContainer>
 
     <NavLogo to="/">
-      Placeholder_icon
+      /home
     </NavLogo>
 
     <NavMenu>
