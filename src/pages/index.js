@@ -20,6 +20,16 @@ const H2 = styled.h2`
     font-size: 1.75rem;
   }
 `
+const H3 = styled.h3`
+  font-weight: 300;
+  font-size: 1.5rem;
+  line-height: 1.25;
+  margin-top: 1.15em;
+
+  ${bpMinSM}{
+    font-size: 1.15rem;
+  }
+`
 
 const ReferenceLink = styled(props => <Link {...props} />)`
   color: #000;
@@ -55,12 +65,12 @@ const IndexPage = () => {
         
           <RoughNotationGroup show={true}>
             {/* <RoughNotation type="box" show={true} order={1} animationDelay={800}> */}
-          <H2>
-            This is my digital corner of the inter-web. I am on the process of deciding what will go into this space.
-          </H2>
-            <H2>
+          <H3>
+            This is my digital corner of the inter-web. I am in the process of deciding what will go into this space.
+          </H3>
+            <H3>
               If you would like to reach me <RoughNotation type="underline" show={true} order={1} animationDelay={50000}><ReferenceLink to="mailto:h.p.batista20@gmail.com">just email me</ReferenceLink></RoughNotation> or you can <RoughNotation type="underline" padding={0} show={true} order={3} animationDelay={50000}><ReferenceLink to="/about/">learn a bit about myself.</ReferenceLink></RoughNotation>
-            </H2>
+            </H3>
           {/* </RoughNotation> */}
           </RoughNotationGroup>
 

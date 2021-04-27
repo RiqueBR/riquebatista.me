@@ -17,7 +17,7 @@ const Wrapper = styled(props => <div {...props}/>)`
 
   @media (max-width: 767px) {
     max-width: 100%;
-    margin: 0;
+    margin: 1rem;
   }
 `
 

@@ -2,18 +2,8 @@ import React from 'react';
 import styled, { css } from 'styled-components';
 import { Twitter, GitHub, LinkedIn} from './ContactIcons'
 
-
-
-const StyledLink = styled.a`
-  color: inherit;
-  text-decoration: none;
-  margin-right: 0.5rem;
-`
-
 const WrappedFooter = styled.footer`
   text-align: center;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
 `
 
 
@@ -24,13 +14,15 @@ const Footer = () => (
         display: flex;
         align-items: center;
         justify-content: space-between;
-        margin-top: 3em;
       `}
     >
       <div
         css={css`
-          font-size: 1em;
+          font-size: 1rem;
           opacity: 0.7;
+            @media (max-width: 375px) {
+              font-size: 0.8rem;
+            }
         `}
       >
         {`Built by Rique Batista \u00A9 ${new Date().getFullYear()}`}
@@ -44,8 +36,16 @@ const Footer = () => (
             color: #00A0C6;
           }
         `}/>
-        <GitHub />
-        <LinkedIn />
+        <GitHub css={css`
+          &:visited {
+            color: #00A0C6;
+          }
+        `}/>
+        <LinkedIn css={css`
+          &:visited {
+            color: #00A0C6;
+          }
+        `}/>
       </div>
     </div>
   </WrappedFooter>
