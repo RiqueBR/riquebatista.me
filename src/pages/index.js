@@ -3,7 +3,7 @@ import {StaticImage} from 'gatsby-plugin-image';
 import styled, {css} from 'styled-components';
 import { Link } from 'gatsby';
 import { RoughNotation, RoughNotationGroup } from "react-rough-notation";
-import { bpMinSM } from '../lib/breakpoints';
+import { bpMinMD, bpMinSM } from '../lib/breakpoints';
 
 import SEO from "../components/seo";
 import Layout from "../components/layout";
@@ -26,7 +26,7 @@ const H3 = styled.h3`
   line-height: 1.25;
   margin-top: 1.15em;
 
-  ${bpMinSM}{
+  ${bpMinSM}, ${bpMinMD}{
     font-size: 1.15rem;
   }
 `
@@ -69,7 +69,7 @@ const IndexPage = () => {
             This is my digital corner of the inter-web. I am in the process of deciding what will go into this space.
           </H3>
             <H3>
-              If you would like to reach me <RoughNotation type="underline" show={true} order={1} animationDelay={50000}><ReferenceLink to="mailto:h.p.batista20@gmail.com">just email me</ReferenceLink></RoughNotation> or you can <RoughNotation type="underline" padding={0} show={true} order={3} animationDelay={50000}><ReferenceLink to="/about/">learn a bit about myself.</ReferenceLink></RoughNotation>
+              If you would like to reach me <RoughNotation type="underline" show={true} order={1} animationDelay={50000}><ReferenceLink to="mailto:h.p.batista20@gmail.com">just email me</ReferenceLink></RoughNotation> <br/> or you can <RoughNotation type="underline" padding={0} show={true} order={3} animationDelay={50000}><ReferenceLink to="/about/">learn a bit about myself.</ReferenceLink></RoughNotation>
             </H3>
           {/* </RoughNotation> */}
           </RoughNotationGroup>

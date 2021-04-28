@@ -46,7 +46,7 @@ const About = () => (
     </Subheader>
     <GridContainer>
       <Paragraph>
-        I am a web developer living in Glasgow, Scotland. I'm very passionate about what I do, from creating digital solutions to providing a good experience for users. I was born in Brazil and have lived in three different countries, and have learnt tons about different cultures. 
+        I am a software developer living in Glasgow, Scotland. I'm very passionate about what I do, from creating digital solutions to providing a good experience for users. I was born in Brazil and have lived in three different countries, and have learnt tons about different cultures. 
       </Paragraph>
       {/* <StaticImage
         src="../images/timmy_turner.png" 
