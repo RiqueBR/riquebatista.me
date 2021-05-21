@@ -14,17 +14,17 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   `);
 
   if (result.errors) {
-    reporter.panic('failed to create posts', result.errors)
+    reporter.panic('failed to create notes', result.errors)
   }
 
-  const projects = result.data.allMdx.nodes;
+  const notes = result.data.allMdx.nodes;
 
-  projects.forEach(project => {
+  notes.forEach(note => {
     actions.createPage({
-      path: project.frontmatter.slug,
-      component: require.resolve('./src/templates/project.js'),
+      path: note.frontmatter.slug,
+      component: require.resolve('./src/templates/note.js'),
       context: {
-        slug: project.frontmatter.slug
+        slug: note.frontmatter.slug
       }
     })
   });

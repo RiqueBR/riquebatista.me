@@ -11,7 +11,7 @@ const Wrapper = styled(props => <div {...props}/>)`
   font-family: Lato, sans-serif;
   max-width: 1230px;
   margin: 0 auto;
-  min-height: 100vh;
+  min-height: 95vh;
   display: flex;
   flex-direction: column;
 
