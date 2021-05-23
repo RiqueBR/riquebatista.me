@@ -2,22 +2,25 @@ import React from "react"
 import PropTypes from "prop-types"
 import Helmet from 'react-helmet'
 import styled, { css } from 'styled-components'
-import { bpMinMD } from '../lib/breakpoints';
+import { bpMaxMD, bpMaxSM } from '../lib/breakpoints';
 
 import Header from './header'
 import Footer from './footer'
 
 const Wrapper = styled(props => <div {...props}/>)`
   font-family: Lato, sans-serif;
-  max-width: 1230px;
+  max-width: 1100px;
   margin: 0 auto;
   min-height: 95vh;
   display: flex;
   flex-direction: column;
 
-  @media (max-width: 767px) {
-    max-width: 100%;
-    margin: 1rem;
+  ${bpMaxMD} {
+    padding: 0 2rem;
+  }
+
+  ${bpMaxSM}{
+    padding: 0 2rem;
   }
 `
 

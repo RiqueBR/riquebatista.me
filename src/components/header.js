@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'gatsby';
-import { bpMinSM, bpMinMD } from '../lib/breakpoints';
+import { bpMaxSM, bpMaxMD } from '../lib/breakpoints';
 
 const NavbarContainer = styled.nav`
   display: flex;
@@ -11,12 +11,12 @@ const NavbarContainer = styled.nav`
   z-index: 1;
   width: 100%;
   
-  ${bpMinSM}{
+  ${bpMaxSM}{
     height: 40px;
     justify-content: space-between;
   }
 
-  ${bpMinMD}{
+  ${bpMaxMD}{
     height: 40px;
     justify-content: space-between;
   }
@@ -26,10 +26,10 @@ const NavbarContainer = styled.nav`
 
 const NavLink = styled(props => <Link {...props} />)`
   color: #222;
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: ${props => props.fontWeight || 'normal'};
   line-height: 1.25;
-  margin-right: 0.5rem;
+  margin-right: 1.5rem;
   padding-right: 0.5rem;
   text-decoration: none;
     &.current-page {
@@ -44,11 +44,11 @@ const NavLink = styled(props => <Link {...props} />)`
       border-bottom: 2px solid #222;
     }
 
-  ${bpMinSM} {
-    font-size: 12px;
+  ${bpMaxSM} {
+    font-size: 1rem;
   }
-  ${bpMinMD} {
-    font-size: 16px;
+  ${bpMaxMD} {
+    font-size: 1rem;
     padding-right: 0;
     margin-right: 0.4rem;
   }
@@ -59,18 +59,18 @@ const NavLogo = styled(props => <Link {...props} />)`
   line-height: 1;
   align-items: center;
   cursor: pointer;
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: bold;
   text-decoration: none;
 
-  ${bpMinSM} {
-    font-size: 12px;
+  ${bpMaxSM} {
+    font-size: 1.2rem;
     margin-left: 0px;
     margin-right: 1rem;
   }
   
-  ${bpMinMD} {
-    font-size: 16px;
+  ${bpMaxMD} {
+    font-size: 1.2rem;
     margin-left: 0px;
     margin-right: 3.5rem;
   }

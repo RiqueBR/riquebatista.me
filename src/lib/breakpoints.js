@@ -1,7 +1,7 @@
-const minSM = 375
-const minMD = 600
-const minLG = 900
+const maxSM = 375
+const maxMD = 600
+const maxLG = 900
 
-export const bpMinSM = `@media (max-width: ${minSM}px)`
-export const bpMinMD = `@media (max-width: ${minMD}px)`
-export const bpMinLG = `@media (max-width: ${minLG}px)`
+export const bpMaxSM = `@media (max-width: ${maxSM}px)`
+export const bpMaxMD = `@media (max-width: ${maxMD}px)`
+export const bpMaxLG = `@media (max-width: ${maxLG}px)`

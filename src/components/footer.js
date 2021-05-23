@@ -4,6 +4,9 @@ import { Twitter, GitHub, LinkedIn} from './ContactIcons'
 
 const WrappedFooter = styled.footer`
   text-align: center;
+  border-top: 2px solid #f1f4f8;
+  padding-top: .5rem;
+  margin-top: 1rem;
 `
 
 

@@ -3,7 +3,7 @@ import {StaticImage} from 'gatsby-plugin-image';
 import styled, {css} from 'styled-components';
 import { Link } from 'gatsby';
 import { RoughNotation, RoughNotationGroup } from "react-rough-notation";
-import { bpMinMD, bpMinSM } from '../lib/breakpoints';
+import { bpMaxMD, bpMaxSM } from '../lib/breakpoints';
 
 import SEO from "../components/seo";
 import Layout from "../components/layout";
@@ -16,7 +16,7 @@ const H2 = styled.h2`
   line-height: 1.25;
   margin-top: 1.15em;
 
-  ${bpMinSM}{
+  ${bpMaxSM}{
     font-size: 1.75rem;
   }
 `
@@ -26,7 +26,7 @@ const H3 = styled.h3`
   line-height: 1.25;
   margin-top: 1.15em;
 
-  ${bpMinSM}, ${bpMinMD}{
+  ${bpMaxSM}, ${bpMaxMD}{
     font-size: 1.15rem;
   }
 `
@@ -68,8 +68,12 @@ const IndexPage = () => {
           <H3>
             This is my digital corner of the inter-web. I am in the process of deciding what will go into this space.
           </H3>
+          <H3>
+              Hey, you can <RoughNotation type="underline" show={true} order={1} animationDelay={50000}><ReferenceLink to="mailto:h.p.batista20@gmail.com">email me</ReferenceLink></RoughNotation> if you need to get in contact.
+          </H3>
+
             <H3>
-              If you would like to reach me <RoughNotation type="underline" show={true} order={1} animationDelay={50000}><ReferenceLink to="mailto:h.p.batista20@gmail.com">just email me</ReferenceLink></RoughNotation> <br/> or you can <RoughNotation type="underline" padding={0} show={true} order={3} animationDelay={50000}><ReferenceLink to="/about/">learn a bit about myself.</ReferenceLink></RoughNotation>
+              Alternatively, you can <RoughNotation type="underline" padding={0} show={true} order={3} animationDelay={50000}><ReferenceLink to="/about/">get to know me</ReferenceLink></RoughNotation> a wee bit and see what I've been up to.
             </H3>
           {/* </RoughNotation> */}
           </RoughNotationGroup>

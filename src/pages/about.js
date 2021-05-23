@@ -2,9 +2,17 @@ import React from 'react';
 import styled, {css} from 'styled-components';
 import { StaticImage } from 'gatsby-plugin-image';
 import Layout from '../components/layout';
+import { bpMaxSM } from '../lib/breakpoints';
 
 const H1 = styled.h1`
-  margin-top: 4rem;
+  font-size: 3rem;
+  margin-top: 2rem;
+  margin-bottom: 0;
+
+  ${bpMaxSM}{
+    font-size: 1.5rem;
+    margin-bottom: .5rem;
+  }
 `
 
 const H2 = styled.h2`
@@ -20,7 +28,20 @@ line-height: 1.25;
 `
 
 const Subheader = styled.h2`
-font-weight: 300;
+  font-weight: 300;
+  font-size: 1.8rem;
+  line-height: 1.6;
+  max-width: 700px;
+  margin-top: .5rem;
+  margin-bottom: 1.5rem;
+
+  ${bpMaxSM}{
+    font-size: 1.3rem;
+    font-weight: 300;
+    line-height: 1.6;
+    margin-top: .5rem;
+    margin-bottom: 1.5rem;
+  }
 `
 
 const GridContainer = styled.div`
@@ -34,8 +55,24 @@ const GridContainer = styled.div`
 `
 
 const Paragraph = styled.p`
-  line-height: 2rem;
-  font-size: 1.25rem;
+  font-size: 1.3rem;
+  margin: 0;
+  line-height: 1.5;
+
+    ${bpMaxSM}{
+    font-size: 1.1rem
+  }
+`
+
+const CustomParagraph = styled.p`
+  font-weight: 300;
+  font-size: 1.3rem;
+  margin: 0;
+  line-height: 1.5;
+
+    ${bpMaxSM}{
+    font-size: 1.1rem
+  }
 `
 
 const About = () => (
@@ -50,13 +87,13 @@ const About = () => (
       </Paragraph>
     </GridContainer>
       <H2>Where I can help</H2>
-      <Paragraph>
-        My work intersects many areas, working with design and good ux approaches to development and testing (unit-testing & end-to-end). My preference is for ui and front end development.
-      </Paragraph>
+    <CustomParagraph>
+        My work intersects many areas, working with design and good ux approaches to development and testing (unit-testing & end-to-end).<wbr /> My preference is for ui and front end development.
+      </CustomParagraph>
       <H2>Contact me!</H2>
-      <Paragraph>
-        Have you found something that caught your eye? Or just wanting to have a wee chat? Contact me by sending an email to email@email.com
-      </Paragraph>
+    <CustomParagraph>
+      Have you found something that caught your eye? Or just wanting to have a wee chat? Contact me by sending an email to email@email.com
+      </CustomParagraph>
   </Layout>
 )
 

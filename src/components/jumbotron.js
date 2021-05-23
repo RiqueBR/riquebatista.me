@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { bpMinSM } from '../lib/breakpoints';
+import { bpMaxSM } from '../lib/breakpoints';
 
 
 const H1 = styled.h1`
@@ -9,7 +9,7 @@ const H1 = styled.h1`
   margin-top: 3rem;
   margin-bottom: 0;
 
-  ${bpMinSM}{
+  ${bpMaxSM}{
     font-size: 3.25rem;
     margin-top: 1rem;
   }
@@ -21,7 +21,7 @@ const Subheader = styled.h2`
   margin-top: 0.15em;
   max-width: 37.7rem;
 
-  ${bpMinSM}{
+  ${bpMaxSM}{
     font-size: 1.75rem;
     max-width: 18rem;
   }
@@ -32,7 +32,7 @@ const H2 = styled.h2`
   line-height: 1.25;
   margin-top: 1.15em;
 
-  ${bpMinSM}{
+  ${bpMaxSM}{
     font-size: 1.75rem;
   }
 `

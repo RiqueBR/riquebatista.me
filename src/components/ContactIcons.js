@@ -1,11 +1,12 @@
-
-import React from 'react'
-import { css } from 'styled-components'
+import React from 'react';
+import { css } from 'styled-components';
+import { bpMaxSM } from '../lib/breakpoints';
 import { 
   AiOutlineTwitter, 
   AiOutlineGithub,
   AiOutlineLinkedin
-} from 'react-icons/ai'
+} from 'react-icons/ai';
+
 
 // TODO: Add media queries for reducing the size of these icons
 
@@ -20,8 +21,12 @@ export const Twitter = ({ url = "https://twitter.com/rique_p_batista" }) => {
         color: #000;
         margin-left: 10px;
         font-size: 2rem;
-        :hover {
+        &:hover {
           color: #0ac;
+        }
+
+        ${bpMaxSM} {
+          font-size: 1.5rem;
         }
       `}
       aria-label="Henrique's twitter profile"
@@ -44,8 +49,12 @@ export const GitHub = ({ url = "https://github.com/RiqueBR" }) => {
         margin-left: 10px;
         color: #000;
         font-size: 2rem;
-        :hover {
+        &:hover {
           color: #0ac;
+        }
+
+        ${bpMaxSM} {
+          font-size: 1.5rem;
         }
       `}
       aria-label="Henrique's GitHub profile"
@@ -66,8 +75,12 @@ export const LinkedIn = ({ url = "https://www.linkedin.com/in/henrique-batista/"
         margin-left: 10px;
         color: #000;
         font-size: 2rem;
-        :hover {
+        &:hover {
           color: #0ac;
+        }
+
+        ${bpMaxSM} {
+          font-size: 1.5rem;
         }
       `}
       aria-label="Henrique's LinkedIn profile"
