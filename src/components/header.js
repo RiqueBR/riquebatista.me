@@ -96,24 +96,24 @@ const Header = () => (
     </NavLogo>
 
     <NavMenu>
-      {/* <NavLink 
-        to="/garden/" 
+      <NavLink 
+        to="/notes/" 
         activeClassName="current-page"
         fontWeight="300">
-        /digital garden
-      </NavLink> */}
-      {/* <NavLink 
+        /notes
+      </NavLink>
+      <NavLink 
         to="/about/" 
         activeClassName="current-page" 
         fontWeight="300">
         /about
-      </NavLink> */}
-      {/* <NavLink 
+      </NavLink>
+      <NavLink 
         to="/projects/" 
         activeClassName="current-page"
         fontWeight="300">
         /projects
-      </NavLink> */}
+      </NavLink>
     </NavMenu>
   </NavbarContainer>
 );

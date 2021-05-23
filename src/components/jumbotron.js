@@ -6,12 +6,12 @@ import { bpMinSM } from '../lib/breakpoints';
 const H1 = styled.h1`
   font-weight: 600;
   font-size: 3.5rem;
-  margin-top: 4rem;
+  margin-top: 3rem;
   margin-bottom: 0;
 
   ${bpMinSM}{
     font-size: 3.25rem;
-    margin-top: 1.5rem;
+    margin-top: 1rem;
   }
 `
 const Subheader = styled.h2`
@@ -51,11 +51,8 @@ const Jumbotron = () => (
   <div>
     <H1>Henrique Batista</H1>
     <Subheader>
-      Software developer, novice designer and amateur UX researcher.
+      Software developer, novice designer and amateur UX enthusiast.
     </Subheader>
-    {/* <H2>
-      This is my portfolio website. You'll find some of my previous and current work, and learn a wee bit about me. It's under construction at the moment but you can reach me <Link href="mailto:h.p.batista20@gmail.com">here</Link>.
-    </H2> */}
   </div>
 );
 

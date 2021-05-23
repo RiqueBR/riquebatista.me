@@ -27,5 +27,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
         slug: note.frontmatter.slug
       }
     })
+
+    actions.createRedirect({ fromPath: `notes/${note.frontmatter.slug}`, toPath: `/${note.frontmatter.slug}`, isPermanent: true })
   });
 }

@@ -7,6 +7,8 @@ import {
   AiOutlineLinkedin
 } from 'react-icons/ai'
 
+// TODO: Add media queries for reducing the size of these icons
+
 export const Twitter = ({ url = "https://twitter.com/rique_p_batista" }) => {
   
   return (

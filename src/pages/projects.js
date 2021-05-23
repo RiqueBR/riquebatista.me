@@ -26,7 +26,7 @@ const Projects = () => {
         <h2>Project title</h2>
         <div>
           <h3>A subheader here with a catch phrase</h3>
-          <p><i>Year built - The technologies used here</i></p>
+          <p><i>01/01/2020 - The technologies used here</i></p>
         </div>
 
         <StaticImage 
@@ -34,16 +34,15 @@ const Projects = () => {
           alt="Picture of monitor under construction"
           placeholder="blurred"
           layout="constrained"
-          // css={css`
-          //     box-shadow:
-          //     0 2.8px 2.2px rgba(0, 0, 0, 0.034),
-          //     0 6.7px 5.3px rgba(0, 0, 0, 0.048),
-          //     0 12.5px 10px rgba(0, 0, 0, 0.06),
-          //     0 22.3px 17.9px rgba(0, 0, 0, 0.072),
-          //     0 41.8px 33.4px rgba(0, 0, 0, 0.086),
-          //     0 100px 80px rgba(0, 0, 0, 0.12);
-          // `}
         />
+
+        <p>
+          Offal put a bird on it disrupt, biodiesel crucifix williamsburg leggings. Pop-up tofu copper mug YOLO raw denim gastropub cardigan. Keytar seitan retro hot chicken franzen.
+        </p>
+
+        <p>
+          Authentic pug vape copper mug unicorn lo-fi knausgaard fam before they sold out umami.
+        </p>
       </div>
 
   </Layout>

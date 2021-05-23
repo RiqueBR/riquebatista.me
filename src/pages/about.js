@@ -42,20 +42,12 @@ const About = () => (
   <Layout>
     <H1>Henrique Batista</H1>
     <Subheader>
-      Software engineer, passionate about creating digital solutions, life long learner
+      Software engineer, runner and life long learner
     </Subheader>
     <GridContainer>
       <Paragraph>
         I am a software developer living in Glasgow, Scotland. I'm very passionate about what I do, from creating digital solutions to providing a good experience for users. I was born in Brazil and have lived in three different countries, and have learnt tons about different cultures. 
       </Paragraph>
-      {/* <StaticImage
-        src="../images/timmy_turner.png" 
-        alt="Picture of Henrique"
-        placeholder="blurred"
-        layout="constrained"
-        width={313}
-        height={744}
-      /> */}
     </GridContainer>
       <H2>Where I can help</H2>
       <Paragraph>

@@ -1,10 +1,10 @@
 import React from 'react';
-import {Link} from 'gatsby'
 import useContent from '../hooks/useContent'
 
 import Layout from '../components/layout'
+import ListItem from '../components/ListItem'
 
-const Garden = () => {
+const Notes = () => {
   const notes = useContent()
   
   return (
@@ -15,11 +15,8 @@ const Garden = () => {
       A space for notes, thoughts, collections and explorations without the pressure of a publish button
       <ul>
       {notes.map(note => (
-        <li key={note.slug}>
-          <p>{note.title}</p>
-          <Link to={note.slug}>Read more</Link>
-
-        </li>
+        <ListItem {...note} key={note.slug}/>
+        
       ))}
 
       </ul>
@@ -27,4 +24,4 @@ const Garden = () => {
   )
 }
 
-export default Garden
+export default Notes;
