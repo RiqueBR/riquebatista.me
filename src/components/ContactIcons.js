@@ -1,6 +1,6 @@
 import React from 'react';
 import { css } from 'styled-components';
-import { bpMaxSM } from '../lib/breakpoints';
+import { bpMaxSM, bpMaxMD } from '../lib/breakpoints';
 import { 
   AiOutlineTwitter, 
   AiOutlineGithub,
@@ -26,6 +26,9 @@ export const Twitter = ({ url = "https://twitter.com/rique_p_batista" }) => {
         }
 
         ${bpMaxSM} {
+          font-size: 1.5rem;
+        }
+        ${bpMaxMD} {
           font-size: 1.5rem;
         }
       `}
@@ -56,6 +59,9 @@ export const GitHub = ({ url = "https://github.com/RiqueBR" }) => {
         ${bpMaxSM} {
           font-size: 1.5rem;
         }
+        ${bpMaxMD} {
+          font-size: 1.5rem;
+        }
       `}
       aria-label="Henrique's GitHub profile"
     >
@@ -80,6 +86,9 @@ export const LinkedIn = ({ url = "https://www.linkedin.com/in/henrique-batista/"
         }
 
         ${bpMaxSM} {
+          font-size: 1.5rem;
+        }
+        ${bpMaxMD} {
           font-size: 1.5rem;
         }
       `}
