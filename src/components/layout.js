@@ -22,6 +22,10 @@ const Wrapper = styled(props => <div {...props}/>)`
   ${bpMaxSM}{
     padding: 0 2rem;
   }
+
+  $@media screen( max-height: 768px ){
+    min-height: 80vh;
+  }
 `
 
 
