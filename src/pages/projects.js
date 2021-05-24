@@ -1,30 +1,44 @@
 import React from 'react';
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 import { StaticImage } from 'gatsby-plugin-image';
 
-import {bpMaxSM, bpMaxMD} from '../lib/breakpoints';
-
 import Layout from '../components/layout';
+import { bpMaxMD, bpMinLG, bpMinMD} from '../lib/breakpoints';
+
 
 
 const H1 = styled.h1`
-  font-size: 3rem;
-  margin-top: 2rem;
+  font-size: 1.8rem;
+  margin-top: 3rem;
 
-  ${bpMaxMD} {
+
+  ${bpMinMD} {
     font-size: 2rem;
+  }
+
+  ${bpMinLG} {
+    font-size: 3rem;
+    margin-top: 2rem;
   }
 `
 
 const SubHeader = styled.h2`
-  font-size: 1.8rem;
+
+  font-size: 1.3rem;
   font-weight: 500;
-  line-height: 1.6;
-  max-width: 700px;
+  line-height: 1.3;
   margin: 0;
 
-  ${bpMaxMD} {
-    font-size: 1.3rem;
+  ${bpMinLG}{
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 1.6;
+    max-width: 700px;
+    margin: 0;
+  }
+
+  ${bpMinMD} {
+    font-size: 1.5rem;
     font-weight: 500;
   }
 `
@@ -34,15 +48,16 @@ const ProjectTitle = styled.h2`
   font-size: 2rem;
 
   ${bpMaxMD} {
-    font-size: 1.5rem;
+    font-size: 1.45rem;
   }
+
 `
 const ProjectSubHeader = styled.h3`
   margin-bottom: 0;
   font-size: 1.5rem;
 
     ${bpMaxMD} {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
 `
 const ProjectTech = styled.p`
@@ -51,24 +66,18 @@ const ProjectTech = styled.p`
   font-style: italic;
 
   ${bpMaxMD} {
+    margin-top: 0.25rem;
     font-size: 1.1rem;
-  }
-  ${bpMaxSM} {
-    font-size: 0.9rem;
   }
 `
 
 const ProjectDesc = styled.p`
-  max-width: 700px;
-  font-size: 1.3rem;
-  line-height: 1.6;
+  font-size: 1rem;
 
-  ${bpMaxMD} {
-    font-size: 1.1rem;
-  }
-
-  ${bpMaxSM} {
-    font-size: 1rem;
+  ${bpMinLG} {
+    max-width: 700px;
+    font-size: 1.3rem;
+    line-height: 1.6;
   }
 `
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'gatsby';
-import { bpMaxSM, bpMaxMD, bpMinLG, bpMinMD } from '../lib/breakpoints';
+import { bpMinLG, bpMinMD } from '../lib/breakpoints';
 
 const NavbarContainer = styled.nav`
   display: flex;
@@ -23,7 +23,7 @@ const NavLink = styled(props => <Link {...props} />)`
   color: #222;
   font-size: 1.1rem;
   font-weight: ${props => props.fontWeight || 'normal'};
-  line-height: 1.25;
+  line-height: 1.5;
   margin-right: .75rem;
   text-decoration: none;
     &.current-page {
