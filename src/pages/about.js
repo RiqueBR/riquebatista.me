@@ -2,43 +2,47 @@ import React from 'react';
 import styled, {css} from 'styled-components';
 import { StaticImage } from 'gatsby-plugin-image';
 import Layout from '../components/layout';
-import { bpMinSM, bpMaxSM } from '../lib/breakpoints';
+import { bpMinLG, bpMinMD, bpMaxSM } from '../lib/breakpoints';
 
 const H1 = styled.h1`
   font-size: 3rem;
-  margin-top: 2rem;
+  margin-top: 3rem;
   margin-bottom: 0;
 
-  ${bpMaxSM}{
-    font-size: 1.5rem;
-    margin-bottom: .5rem;
+  ${bpMinLG}{
+    font-size: 3rem;
+    margin-top: 2rem;
+    margin-bottom: 0;
   }
 `
 
 const H2 = styled.h2`
+
 font-weight: 500;
 line-height: 1.25;
+margin-bottom: 0.5rem;
+
   &:after {
     content: "";
     border-top: 0.25rem solid #46b3d1;
     margin: 0.5rem 0;
     display: block;
-    width: 2rem;
+    width: 2.5rem;
   }
 `
 
 const Subheader = styled.h2`
-  font-weight: 300;
   font-size: 1.8rem;
-  line-height: 1.6;
-  max-width: 700px;
-  margin-top: .5rem;
+  font-weight: 300;
+  line-height: 1.4;
+  margin-top: .25rem;
   margin-bottom: 1.5rem;
 
-  ${bpMaxSM}{
-    font-size: 1.3rem;
+  ${bpMinLG}{
     font-weight: 300;
+    font-size: 1.8rem;
     line-height: 1.6;
+    max-width: 700px;
     margin-top: .5rem;
     margin-bottom: 1.5rem;
   }
@@ -46,32 +50,52 @@ const Subheader = styled.h2`
 
 const GridContainer = styled.div`
   display: grid;
-  grid-template-columns: 60% 40%;
-  gap: 2em;
-
-    @media (max-width: 767px) {
-      grid-template-columns: 1fr;
+  grid-template-columns: 1fr;
+  
+  ${bpMinLG}{
+    display: grid;
+    grid-template-columns: 60% 40%;
+    gap: 2em;
   }
 `
 
 const Paragraph = styled.p`
-  font-size: 1.3rem;
-  margin: 0;
-  line-height: 1.5;
 
-    ${bpMaxSM}{
-    font-size: 1.1rem
+font-size: 1.1rem
+
+  ${bpMinLG}{
+    font-size: 1.3rem;
+    margin: 0;
+    line-height: 1.5;
+  }
+
+  ${bpMinMD}{
+    font-size: 1.3rem;
+    margin: 0;
+    line-height: 1.5;
   }
 `
 
 const CustomParagraph = styled.p`
-  font-weight: 300;
-  font-size: 1.3rem;
-  margin: 0;
-  line-height: 1.5;
 
-    ${bpMaxSM}{
-    font-size: 1.1rem
+  font-size: 1.1rem;
+  font-weight: 300;
+  margin-top: 0.5rem;
+  
+  ${bpMinLG}{
+    font-weight: 300;
+    font-size: 1.3rem;
+    margin: 0;
+    line-height: 1.5;
+    max-width: 45rem;
+  }
+
+  ${bpMinMD}{
+    font-weight: 300;
+    font-size: 1.3rem;
+    margin: 0;
+    line-height: 1.5;
+    max-width: 45rem;
   }
 `
 

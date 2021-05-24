@@ -69,11 +69,7 @@ const IndexPage = () => {
             This is my digital corner of the inter-web. I am in the process of deciding what will go into this space.
           </H3>
           <H3>
-              Hey, you can <RoughNotation type="underline" show={true} order={1} animationDelay={50000}><ReferenceLink to="mailto:h.p.batista20@gmail.com">email me</ReferenceLink></RoughNotation> if you need to get in contact.
-          </H3>
-
-            <H3>
-              Alternatively, you can <RoughNotation type="underline" padding={0} show={true} order={3} animationDelay={50000}><ReferenceLink to="/about/">get to know me</ReferenceLink></RoughNotation> a wee bit and see what I've been up to.
+              Hey, you can <RoughNotation type="underline" show={true} order={1} animationDelay={50000}><ReferenceLink to="mailto:h.p.batista20@gmail.com">email me</ReferenceLink></RoughNotation> if you need to get in contact. Or you can <RoughNotation type="underline" padding={0} show={true} order={3} animationDelay={50000}><ReferenceLink to="/about/">get to know me</ReferenceLink></RoughNotation> a wee bit more and see what I've been up to.
             </H3>
           {/* </RoughNotation> */}
           </RoughNotationGroup>
