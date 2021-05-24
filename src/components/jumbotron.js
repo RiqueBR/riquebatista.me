@@ -1,51 +1,35 @@
 import React from 'react';
 import styled from 'styled-components';
-import { bpMaxSM } from '../lib/breakpoints';
+import { bpMinSM, bpMaxSM, bpMinLG } from '../lib/breakpoints';
 
 
 const H1 = styled.h1`
-  font-weight: 600;
-  font-size: 3.5rem;
+  font-size: 2.8rem;
   margin-top: 3rem;
-  margin-bottom: 0;
+  margin-bottom: .5rem;
 
-  ${bpMaxSM}{
-    font-size: 3.25rem;
-    margin-top: 1rem;
+  ${bpMinLG}{
+    font-weight: 600;
+    font-size: 3.5rem;
+    margin-top: 3rem;
+    margin-bottom: 0;
   }
+
+
 `
 const Subheader = styled.h2`
-  font-weight: 300;
-  font-size: 2rem;
+
+  font-size: 1.75rem;
   line-height: 1.3;
-  margin-top: 0.15em;
-  max-width: 37.7rem;
-
-  ${bpMaxSM}{
-    font-size: 1.75rem;
-    max-width: 18rem;
-  }
-`
-const H2 = styled.h2`
   font-weight: 300;
-  font-size: 2rem;
-  line-height: 1.25;
-  margin-top: 1.15em;
-
-  ${bpMaxSM}{
-    font-size: 1.75rem;
+  max-width: 17.7rem;
+  
+  ${bpMinLG}{
+    font-size: 2rem;
+    margin-top: 0.15em;
+    max-width: 34rem;
   }
 `
-const Link = styled.a`
-  color: #444;
-  text-decoration: underline;
-  &:hover{
-    color: #444;
-    text-decoration: underline; 
-    cursor: pointer;
-  }
-`
-
 
 const Jumbotron = () => (
   <div>

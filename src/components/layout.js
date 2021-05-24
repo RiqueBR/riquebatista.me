@@ -23,7 +23,7 @@ const Wrapper = styled(props => <div {...props}/>)`
     padding: 0 2rem;
   }
 
-  $@media screen( max-height: 768px ){
+  $@media screen( max-height: 800px ){
     min-height: 80vh;
   }
 `

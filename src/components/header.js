@@ -40,15 +40,14 @@ const NavLink = styled(props => <Link {...props} />)`
       margin-right: 0;
     }
     &:hover {
-      color: #222
-      border-bottom: 2px solid #222;
+      color: #0ac;
     }
 
   ${bpMaxSM} {
     font-size: 1rem;
   }
   ${bpMaxMD} {
-    font-size: 1rem;
+    font-size: 1.2rem;
     padding-right: 0;
     margin-right: 0.4rem;
   }
@@ -70,7 +69,7 @@ const NavLogo = styled(props => <Link {...props} />)`
   }
   
   ${bpMaxMD} {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     margin-left: 0px;
     margin-right: 3.5rem;
   }
@@ -103,16 +102,16 @@ const Header = () => (
         /notes
       </NavLink>
       <NavLink 
-        to="/about/" 
-        activeClassName="current-page" 
-        fontWeight="300">
-        /about
-      </NavLink>
-      <NavLink 
         to="/projects/" 
         activeClassName="current-page"
         fontWeight="300">
         /projects
+      </NavLink>
+      <NavLink 
+        to="/about/" 
+        activeClassName="current-page" 
+        fontWeight="300">
+        /about
       </NavLink>
     </NavMenu>
   </NavbarContainer>

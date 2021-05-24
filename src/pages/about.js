@@ -2,7 +2,7 @@ import React from 'react';
 import styled, {css} from 'styled-components';
 import { StaticImage } from 'gatsby-plugin-image';
 import Layout from '../components/layout';
-import { bpMaxSM } from '../lib/breakpoints';
+import { bpMinSM, bpMaxSM } from '../lib/breakpoints';
 
 const H1 = styled.h1`
   font-size: 3rem;

@@ -1,53 +1,55 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'gatsby';
-import { bpMaxSM } from '../lib/breakpoints';
+import { bpMinLG, bpMaxSM } from '../lib/breakpoints';
 
 // This component could be used for both /notes or /projects
 
 const NoteWrapper = styled.li`
   list-style: none;
-  padding: 3rem 0;
-  border-bottom: 2px solid #f1f4f8;
-
-  &:last-child {
-    border-bottom: none;
-  }
-
-  ${bpMaxSM}{
-    padding: 2rem 0;
-    border-bottom: none;
+  padding: 1rem 0;
+  
+  ${bpMinLG} {
+    max-width: 50rem;
+    padding: 3rem 0;
   }
 `
 
 const Title = styled.h2`
-  margin: 0;
-  font-size: 1.55rem;
-  padding-bottom: .5rem;
+  font-size: 1.3rem;
+  margin-bottom: 0.25rem;
 
-  ${bpMaxSM}{
-    font-size: 1.3rem
+  ${bpMinLG} {
+    margin: 0;
+    font-size: 1.55rem;
+    padding-bottom: .5rem;
   }
+
 `
 
 const TimeStamp = styled.time`
-  font-size: 1rem;
-  display: block;
-  margin-bottom: 1rem;
-  
-  ${bpMaxSM}{
-    font-size: .9rem
+
+font-size: .9rem;
+display: block;
+margin-top: 0.25rem;
+
+${bpMinLG} {
+    font-size: 1rem;
   }
+
 `
 
 const Paragraph = styled.p`
-  font-size: 1.3rem;
-  margin: 0;
-  line-height: 1.5;
+  font-size: 1.1rem;
+  margin-top: 1rem;
 
-    ${bpMaxSM}{
-    font-size: 1.1rem
+  ${bpMinLG}{
+    line-height: 1.5;
+    font-size: 1.3rem;
+    margin-top: 1.5rem;
   }
+
+
 `
 
 const LinkWrapper = styled(Link)`
@@ -62,7 +64,7 @@ const ListItem = ({...props}) => {
     <NoteWrapper>
       <LinkWrapper to={`../${props.slug}`}>
       <Title>{props.title}</Title>
-      <TimeStamp>January 01, 2021</TimeStamp>
+        <TimeStamp><i>January 01, 2021</i></TimeStamp>
 
       <Paragraph>{props.excerpt}</Paragraph>
       </LinkWrapper>
