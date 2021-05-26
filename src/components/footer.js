@@ -7,6 +7,7 @@ const WrappedFooter = styled.footer`
   border-top: 2px solid #f1f4f8;
   padding-top: .5rem;
   margin-top: 2rem;
+
 `
 
 

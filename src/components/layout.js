@@ -20,13 +20,13 @@ const Wrapper = styled(props => <div {...props}/>)`
   }
 
   ${bpMaxSM}{
-    padding: 0 2rem;
+    padding: 0 1rem;
   }
 
-  $@media screen( max-height: 800px ){
-    min-height: 80vh;
-  }
-`
+  `
+  // @media only screen and ( max-device-height: 812px ){
+  //   min-height: 80vh;
+  // }
 
 
 const Layout = ({ children }) => {
