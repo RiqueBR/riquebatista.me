@@ -2,7 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 import { css } from "styled-components"
 import { MDXRenderer } from "gatsby-plugin-mdx"
-import Layout from "../components/layout"
+import Layout from "../components/Layout"
 import ReadLink from "../components/Read-Link"
 
 // TODO: This needs a major revamp, place more imagery and handle line height and font-size
