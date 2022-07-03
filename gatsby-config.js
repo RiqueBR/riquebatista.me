@@ -14,24 +14,24 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-plugin-mdx',
+      resolve: "gatsby-plugin-mdx",
       // Setting what type of layout I'd like to use for MDX
       options: {
         defaultLayouts: {
-          default: require.resolve('./src/components/layout.js')
-        }
-      }
+          default: require.resolve("./src/components/Layout.js"),
+        },
+      },
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-image`,
     {
-      resolve: 'gatsby-source-filesystem',
+      resolve: "gatsby-source-filesystem",
       options: {
         path: `${__dirname}/content/notes`,
-        name: 'notes'
-      }
+        name: "notes",
+      },
     },
   ],
 }
