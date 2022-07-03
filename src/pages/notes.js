@@ -3,7 +3,7 @@ import styled from "styled-components"
 
 import useContent from "../hooks/useContent"
 
-import Layout from "../components/layout"
+import Layout from "../components/Layout"
 import ListItem from "../components/List-Item"
 import { bpMinLG } from "../lib/breakpoints"
 

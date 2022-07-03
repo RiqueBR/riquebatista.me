@@ -1,16 +1,13 @@
-import React from 'react';
-import styled from 'styled-components';
-import { StaticImage } from 'gatsby-plugin-image';
+import React from "react"
+import styled from "styled-components"
+import { StaticImage } from "gatsby-plugin-image"
 
-import Layout from '../components/layout';
-import { bpMaxMD, bpMinLG, bpMinMD} from '../lib/breakpoints';
-
-
+import Layout from "../components/Layout"
+import { bpMaxMD, bpMinLG, bpMinMD } from "../lib/breakpoints"
 
 const H1 = styled.h1`
   font-size: 1.8rem;
   margin-top: 3rem;
-
 
   ${bpMinMD} {
     font-size: 2rem;
@@ -23,13 +20,12 @@ const H1 = styled.h1`
 `
 
 const SubHeader = styled.h2`
-
   font-size: 1.3rem;
   font-weight: 500;
   line-height: 1.3;
   margin: 0;
 
-  ${bpMinLG}{
+  ${bpMinLG} {
     font-size: 1.8rem;
     font-weight: 500;
     line-height: 1.6;
@@ -50,13 +46,12 @@ const ProjectTitle = styled.h2`
   ${bpMaxMD} {
     font-size: 1.45rem;
   }
-
 `
 const ProjectSubHeader = styled.h3`
   margin-bottom: 0;
   font-size: 1.5rem;
 
-    ${bpMaxMD} {
+  ${bpMaxMD} {
     font-size: 1.2rem;
   }
 `
@@ -81,27 +76,26 @@ const ProjectDesc = styled.p`
   }
 `
 
-
-
 const Projects = () => {
-
-
   return (
     <Layout>
       <H1>Projects</H1>
 
       <SubHeader>
-        A small selection of the work I've done, both on a commercial and personal level. If you want to check them all, go check my github.
+        A small selection of the work I've done, both on a commercial and
+        personal level. If you want to check them all, go check my github.
       </SubHeader>
 
       <div>
         <ProjectTitle>Project title</ProjectTitle>
         <div>
-          <ProjectSubHeader>A subheader here with a catch phrase</ProjectSubHeader>
+          <ProjectSubHeader>
+            A subheader here with a catch phrase
+          </ProjectSubHeader>
           <ProjectTech>01/01/2020 - The technologies used here</ProjectTech>
         </div>
 
-        <StaticImage 
+        <StaticImage
           src="../images/website-template.jpg"
           alt="Picture of monitor under construction"
           placeholder="blurred"
@@ -109,16 +103,18 @@ const Projects = () => {
         />
 
         <ProjectDesc>
-          Offal put a bird on it disrupt, biodiesel crucifix williamsburg leggings. Pop-up tofu copper mug YOLO raw denim gastropub cardigan. Keytar seitan retro hot chicken franzen.
+          Offal put a bird on it disrupt, biodiesel crucifix williamsburg
+          leggings. Pop-up tofu copper mug YOLO raw denim gastropub cardigan.
+          Keytar seitan retro hot chicken franzen.
         </ProjectDesc>
 
         <ProjectDesc>
-          Authentic pug vape copper mug unicorn lo-fi knausgaard fam before they sold out umami.
+          Authentic pug vape copper mug unicorn lo-fi knausgaard fam before they
+          sold out umami.
         </ProjectDesc>
       </div>
-
-  </Layout>
-)
+    </Layout>
+  )
 }
 
-export default Projects;
+export default Projects

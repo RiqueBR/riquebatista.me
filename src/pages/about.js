@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import Layout from "../components/layout"
+import Layout from "../components/Layout"
 import { bpMinLG, bpMinMD, bpMaxSM } from "../lib/breakpoints"
 
 const H1 = styled.h1`
