@@ -1,11 +1,11 @@
-import React from 'react';
-import styled from 'styled-components'
+import React from "react"
+import styled from "styled-components"
 
-import useContent from '../hooks/useContent'
+import useContent from "../hooks/useContent"
 
-import Layout from '../components/layout'
-import ListItem from '../components/ListItem'
-import { bpMinLG } from '../lib/breakpoints';
+import Layout from "../components/layout"
+import ListItem from "../components/List-Item"
+import { bpMinLG } from "../lib/breakpoints"
 
 const Title = styled.h1`
 
@@ -18,19 +18,17 @@ const Title = styled.h1`
 
 `
 const SubTitle = styled.p`
+  font-size: 1.3rem;
+  font-weight: 300;
+  line-height: 1.35;
+  max-width: 18rem;
 
-    font-size: 1.3rem;
-    font-weight: 300;
-    line-height: 1.35;
-    max-width: 18rem;
-
-  ${bpMinLG}{
+  ${bpMinLG} {
     font-size: 1.8rem;
     line-height: 1.6;
     max-width: 43.75rem;
     margin: 0;
   }
-
 `
 
 const List = styled.ul`
@@ -39,25 +37,23 @@ const List = styled.ul`
 
 const Notes = () => {
   const notes = useContent()
-  
-  return (
 
+  return (
     <Layout>
       <Title>Digital Garden</Title>
 
       <SubTitle>
-        A space for notes, thoughts, collections and explorations without the pressure of a publish button.
+        A space for notes, thoughts, collections and explorations without the
+        pressure of a publish button.
       </SubTitle>
-      
-      <List>
-      {notes.map(note => (
-        <ListItem {...note} key={note.slug}/>
-        
-      ))}
 
+      <List>
+        {notes.map(note => (
+          <ListItem {...note} key={note.slug} />
+        ))}
       </List>
     </Layout>
   )
 }
 
-export default Notes;
+export default Notes

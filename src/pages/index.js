@@ -5,9 +5,9 @@ import { Link } from "gatsby"
 import { RoughNotation, RoughNotationGroup } from "react-rough-notation"
 import { bpMaxMD, bpMaxSM } from "../lib/breakpoints"
 
-import SEO from "../components/seo"
-import Layout from "../components/layout"
-import Jumbotron from "../components/jumbotron"
+import SEO from "../components/SEO"
+import Layout from "../components/Layout"
+import Jumbotron from "../components/Jumbotron"
 
 const H3 = styled.h3`
   font-weight: 300;

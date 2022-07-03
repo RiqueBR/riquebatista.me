@@ -1,16 +1,15 @@
 import React from "react"
 import PropTypes from "prop-types"
-import Helmet from 'react-helmet'
-import styled, { css } from 'styled-components'
-import { bpMaxMD, bpMaxSM } from '../lib/breakpoints';
+import Helmet from "react-helmet"
+import styled, { css } from "styled-components"
+import { bpMaxMD, bpMaxSM } from "../lib/breakpoints"
 
-import Header from './header'
-import Footer from './footer'
+import Header from "./Header"
+import Footer from "./Footer"
 
-const Wrapper = styled(props => <div {...props}/>)`
+const Wrapper = styled(props => <div {...props} />)`
   font-family: Lato, sans-serif;
-  max-width: 1100px;
-  margin: 0 auto;
+  margin: 0 2rem;
   min-height: 95vh;
   display: flex;
   flex-direction: column;
@@ -19,33 +18,32 @@ const Wrapper = styled(props => <div {...props}/>)`
     padding: 0 2rem;
   }
 
-  ${bpMaxSM}{
+  ${bpMaxSM} {
     padding: 0 1rem;
   }
-
-  `
-  // @media only screen and ( max-device-height: 812px ){
-  //   min-height: 80vh;
-  // }
-
+`
 
 const Layout = ({ children }) => {
-
   return (
-    <div>
+    <>
       <Helmet>
-        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet"></link>
+        <link
+          href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap"
+          rel="stylesheet"
+        ></link>
       </Helmet>
       <Wrapper>
         <Header />
-            <main css={css`
-              flex: 1;
-            `}>
-              {children}
-            </main>
-          <Footer />
+        <main
+          css={css`
+            flex: 1;
+          `}
+        >
+          {children}
+        </main>
+        <Footer />
       </Wrapper>
-    </div>
+    </>
   )
 }
 

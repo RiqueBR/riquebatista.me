@@ -1,3 +1,8 @@
+/*
+TODO: This needs refactoring, simplify to just 0-399, 400-799, LG?
+
+*/
+
 const maxSM = 375
 const maxMD = 600
 const maxLG = 900
