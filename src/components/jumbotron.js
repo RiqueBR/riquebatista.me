@@ -35,7 +35,7 @@ const Jumbotron = () => (
   <div>
     <H1>Henrique Batista</H1>
     <Subheader>
-      Software developer, novice designer and amateur UX enthusiast.
+      Software engineer, novice designer and amateur UX enthusiast.
     </Subheader>
   </div>
 );
