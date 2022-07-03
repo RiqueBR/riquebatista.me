@@ -21,12 +21,12 @@ const SubTitle = styled.p`
   font-size: 1.3rem;
   font-weight: 300;
   line-height: 1.35;
-  max-width: 18rem;
+  max-width: 65vw;
 
   ${bpMinLG} {
     font-size: 1.8rem;
     line-height: 1.6;
-    max-width: 43.75rem;
+    max-width: 70vw;
     margin: 0;
   }
 `
@@ -44,7 +44,7 @@ const Notes = () => {
 
       <SubTitle>
         A space for notes, thoughts, collections and explorations without the
-        pressure of a publish button.
+        pressure of a publish button. An open garden &#x1f331;
       </SubTitle>
 
       <List>
