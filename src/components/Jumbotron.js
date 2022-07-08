@@ -3,9 +3,8 @@ import styled from "styled-components"
 import { bpMinSM, bpMaxSM, bpMinLG } from "../lib/breakpoints"
 
 const H1 = styled.h1`
-  font-size: 2.8rem;
+  font-size: 5rem;
   margin-top: 3rem;
-  margin-bottom: 0;
 
   @media screen and (max-width: 480px) {
     font-size: 2rem;
@@ -19,10 +18,11 @@ const H1 = styled.h1`
   } */
 `
 const Subheader = styled.h2`
-  font-size: 1.75rem;
+  font-size: 2.25rem;
   line-height: 1.3;
   font-weight: 300;
   max-width: 60vw;
+  margin-top: 0;
 
   @media screen and (max-width: 480px) {
     font-size: 1.5rem;

@@ -5,12 +5,16 @@
 ## Development
 
 ### This website was built using:
+
 1. Gatsby
 2. Netlify
 3. Styled components
 4. [Clak illustrations](https://ls.graphics/)
 
 Still to do:
-  - Finish note template
-  - Write some unit tests
-  - Add a linter
+
+- Finish note template
+- Finish about me page
+- Write some unit tests
+- Add global styles
+- Add fluid typography

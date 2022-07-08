@@ -2,12 +2,29 @@ import React from "react"
 import { StaticImage } from "gatsby-plugin-image"
 import styled, { css } from "styled-components"
 import { Link } from "gatsby"
-import { RoughNotation, RoughNotationGroup } from "react-rough-notation"
 import { bpMaxMD, bpMaxSM } from "../lib/breakpoints"
 
 import SEO from "../components/SEO"
 import Layout from "../components/Layout"
 import Jumbotron from "../components/Jumbotron"
+
+const GridWrapper = styled.div`
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+`
+
+const GrideddJumbotron = styled(Jumbotron)`
+  grid-area: 1 / 1 / 2 / 2;
+`
+const TextContent = styled.div`
+  grid-area: 2 / 1 / 3 / 2;
+`
+const ImageWrapper = styled.div`
+  grid-area: 1 / 2 / 3 / 3;
+`
 
 const H3 = styled.h3`
   font-weight: 300;
@@ -20,9 +37,12 @@ const H3 = styled.h3`
   }
 `
 
-const ReferenceLink = styled(props => <Link {...props} />)`
-  color: #000;
-  text-decoration: none;
+const SquiglyLink = styled(props => <Link {...props} />)`
+  text-decoration-line: underline;
+  text-decoration-style: wavy;
+  text-underline-offset: 2px;
+  text-decoration-color: #334155;
+  color: inherit;
 
   &:hover {
     color: #00a0c6;
@@ -33,56 +53,24 @@ const IndexPage = () => {
   return (
     <Layout>
       <SEO title="Home" />
-      <Jumbotron />
-      <div
-        css={css`
-          display: grid;
-          grid-template-columns: 50% 50%;
-          grid-gap: 10px;
-          place-content: center;
-          align-items: center;
-
-          @media (max-width: 767px) {
-            grid-template-columns: 1fr;
-          }
-        `}
-      >
-        <div>
-          <RoughNotationGroup show={true}>
-            {/* <RoughNotation type="box" show={true} order={1} animationDelay={800}> */}
-            <H3>
-              This is my digital corner of the inter-web. I am in the process of
-              deciding what will go into this space.
-            </H3>
-            <H3>
-              Hey, you can{" "}
-              <RoughNotation
-                type="underline"
-                show={true}
-                order={1}
-                animationDelay={50000}
-              >
-                <ReferenceLink to="mailto:h.p.batista20@gmail.com">
-                  email me
-                </ReferenceLink>
-              </RoughNotation>{" "}
-              if you need to get in contact. Or you can{" "}
-              <RoughNotation
-                type="underline"
-                padding={0}
-                show={true}
-                order={3}
-                animationDelay={50000}
-              >
-                <ReferenceLink to="/about/">get to know me</ReferenceLink>
-              </RoughNotation>{" "}
-              a wee bit more and see what I've been up to.
-            </H3>
-            {/* </RoughNotation> */}
-          </RoughNotationGroup>
-        </div>
-
-        <div
+      <GridWrapper>
+        <GrideddJumbotron />
+        <TextContent>
+          <H3>
+            This is my digital corner of the inter-web. I am in the process of
+            deciding what will go into this space.
+          </H3>
+          <H3>
+            Hey, you can{" "}
+            <SquiglyLink to="mailto:h.p.batista20@gmail.com">
+              email me
+            </SquiglyLink>{" "}
+            if you need to get in contact. Or you can{" "}
+            <SquiglyLink to="/about/">get to know me</SquiglyLink> a wee bit
+            more and see what I've been up to.
+          </H3>
+        </TextContent>
+        <ImageWrapper
           css={css`
             @media (max-width: 767px) {
               display: none;
@@ -97,8 +85,8 @@ const IndexPage = () => {
             width={600}
             height={500}
           />
-        </div>
-      </div>
+        </ImageWrapper>
+      </GridWrapper>
     </Layout>
   )
 }
