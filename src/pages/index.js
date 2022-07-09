@@ -14,13 +14,26 @@ const GridWrapper = styled.div`
   grid-template-rows: repeat(2, 1fr);
   grid-column-gap: 0px;
   grid-row-gap: 0px;
+
+  @media (max-width: 700px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+  }
 `
 
 const GrideddJumbotron = styled(Jumbotron)`
   grid-area: 1 / 1 / 2 / 2;
+
+  @media (max-width: 700px) {
+    grid-area: 1 / 1;
+  }
 `
 const TextContent = styled.div`
   grid-area: 2 / 1 / 3 / 2;
+
+  @media (max-width: 700px) {
+    grid-area: 2 / 1;
+  }
 `
 const ImageWrapper = styled.div`
   grid-area: 1 / 2 / 3 / 3;
@@ -72,7 +85,7 @@ const IndexPage = () => {
         </TextContent>
         <ImageWrapper
           css={css`
-            @media (max-width: 767px) {
+            @media (max-width: 700px) {
               display: none;
             }
           `}
